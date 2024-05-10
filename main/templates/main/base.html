@@ -10,7 +10,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    
     <title>{% block title %}My site{% endblock %}</title>
   </head>
   <body>
@@ -30,7 +31,7 @@
         <li class="nav-item">
           <form id="logout_form" action="{% url "logout" %}" method="post">
           {% csrf_token %}
-          <button class ="nav-link logout_button" type="submit">Logout</button>
+          <button class ="nav-link logout-button" type="submit">Logout</button>
           </form>
         </li>
         {% else %}
