@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login,logout,authenticate
 from .models import Post
 
+# - Home
+
 @login_required(login_url='/login')
 def home(request):
     posts = Post.objects.all()
@@ -54,6 +56,7 @@ def view_post(request, pk):
 
     return render(request, 'post/view_post.html', {"post":all_posts})
  
+# - Sign up
 
 def sign_up(request):
     if request.method == 'POST':
@@ -67,5 +70,3 @@ def sign_up(request):
         form = RegisterForm()
 
     return render(request, 'registration/sign_up.html', {"form":form})
-
-

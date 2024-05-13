@@ -1,7 +1,7 @@
 {% extends "main/base.html" %} 
 {% load static %} 
-{% block title %}Home Page{% endblock %} 
-{% block content %}
+{% block title %}Blog Page{% endblock %}
+ {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
@@ -20,20 +20,20 @@
           <p class="card-text">{{post.description}}</p>
         </div>
         <div class="card-footer d-flex justify-content-between">
-          <p class="text-muted">{{post.created_at}}</p>
+          <p class="creation-date">{{post.created_at}}</p>
           <form method="POST">
             {% csrf_token %}
             <a
               href="{% url 'view_post' post.pk%}"
               class="btn blog-action-button"
-              >Find more</a
-            >
+              >Find more
+            </a>
             {% if user == post.author %}
             <a
               href="{% url 'update_post' post.pk%}"
               class="btn blog-action-button"
-              >Update</a
-            >
+              >Update
+            </a>
             <button
               type="submit"
               class="btn blog-action-button"
