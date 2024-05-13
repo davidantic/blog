@@ -1,0 +1,26 @@
+{% extends "main/base.html" %} 
+{% load static %}
+{% block title %}View a Post{% endblock %} 
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<div class="card mt-3">
+  <div class="card-header">
+    <strong>
+      <p><strong> Author: </strong> {{post.author}}</p>
+    </strong>
+  </div>
+
+  <div class="card-body">
+    <p><strong> Title: </strong> {{post.title}}</p>
+    <p><strong> Description: </strong> {{post.description}}</p>
+    <p><strong> Created at: </strong> {{post.created_at}}</p>
+  </div>
+
+  <div class="card-footer d-flex justify-content-between">
+    <a href="/home" class="btn blog-action-button">Back</a>
+    <button class="btn blog-action-button">Comment</button>
+  </div>
+  {% endblock%}
+</div>
