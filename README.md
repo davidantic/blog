@@ -28,5 +28,5 @@ If you're using a Linux distribution like Ubuntu, it's recommended to set up a v
 
 To test the application, you can use the following credentials:
 
-- **Username:** admin@gmail.com
+- **Username:** Admin
 - **Password:** Password123+
